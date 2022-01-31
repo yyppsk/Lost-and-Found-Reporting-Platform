@@ -2,8 +2,8 @@
 <html>
 <head>
      <title></title>
-     <?php include 'links/links.php' ?>
-     <?php include 'css/style.php' ?>
+     <?php include 'links.php' ?>
+     <?php include 'style.php' ?>
 </head>
 <body>
 
@@ -28,10 +28,10 @@
                     include 'dbcon.php';
 
                     $selectquery = "select * from registration";
-                    $query = mysqli_query($con, $selectquery);
+                    $query = mysqli_query($conn, $selectquery);
                     //$result = mysqli_fetch_array($query);
                     
-                    while($result = mysqli_fetch_array(&query)){
+                    while($result = mysqli_fetch_array($query)){
                     ?>
                     
                     <tr>

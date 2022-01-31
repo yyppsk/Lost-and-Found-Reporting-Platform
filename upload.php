@@ -17,7 +17,7 @@ if($fileerror == 0){
    // echo "$destfile";
     move_uploaded_file($filepath, $destfile);
     $insertquery =" insert into registration(username,email,degree,lang,pic) values('$username','$email','$degree','$lang','$destfile')";
-    $query = mysqli_query($con,$insertquery);
+    $query = mysqli_query($conn,$insertquery);
     if($query){
         echo "Inserted";
     }
