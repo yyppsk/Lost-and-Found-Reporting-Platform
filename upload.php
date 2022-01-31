@@ -5,13 +5,33 @@ if(isset($_POST['submit']))
 $username = $_POST['username']; 
 $email= $_POST['email']; 
 $degree =$_POST['degree']; 
-$userampe = $_POST['username'];
-$username = $_POST['username'];
+$lang = $_POST['lang'];
+$file = $_FILES['photo'];
 
-print_r($file);
+//print_r($file);
+$filename = $file['name'];
+$filepath = $file['tmp_name'];
+$fileerror = $file['error'];
+if($fileerror == 0){
+    $destfile = 'upload/'.$filename;
+    //echo "$destfile";
+    move_uploaded_file($filepath, $destfile);
+
+    $insertuery = "insert into registration(username,email,degree,lang,pic ) values('$username' ,'$email'
+     , '$degree' ,'$lang' , '$destfile')";
+    
+    $query = mysqli_query($con, $insertuery);
+    if($query){
+        echo "Inserted";
+    }else{
+        echo "Not Inserted";
+    }
+
+    header('location:index.php');
+}
+
 }else{
 
-echo "No buttn has been clicked";
+echo "No button has been clicked";
 }
-wefbewvfdwjinQWSFCBDWGUHDJFCBS ADXHJASF
-BVGFCDFGCGF
+?>
