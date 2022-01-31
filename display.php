@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <title></title>
+     <title>Lost and Found : People</title>
      <?php include 'links.php' ?>
      <?php include 'style.php' ?>
 </head>
@@ -11,7 +11,7 @@
      <div class="row d-flex justify-content-center">
           <div class="col-lg-11 col-12">
                <div class="table-responsive">
-               <table class="table-striped text-center table-bordered text-white">
+               <table class="table text-center table-bordered text-black">
                     <thead class="bg-dark text-white">
                          <tr>
                              <th class="py-3 text-white " >id</th>
@@ -30,17 +30,16 @@
                     $selectquery = "select * from people_list";
                     $query = mysqli_query($conn, $selectquery);
                     //$result = mysqli_fetch_array($query);
-                    
                     while($result = mysqli_fetch_array($query)){
                     ?>
                     
                     <tr>
-                        <td> <?php echo $result['id']; ?> </td>
-                        <td> <?php echo $result['username']; ?> </td>
-                        <td> <?php echo $result['email']; ?> </td>
-                        <td> <?php echo $result['degree']; ?> </td>
-                        <td> <?php echo $result['lang']; ?> </td>
-                        <td> <img src="<?php echo $result['pic']; ?>" width="100" height="50"> </td>
+                        <td> <font color=black size='5pt'> <?php echo $result['id']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['username']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['email']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['degree']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['lang']; ?> </td>
+                        <td> <img src="<?php echo $result['pic']; ?>" width="300" height="300"> </td>
                     </tr>
                     
                     <?php
