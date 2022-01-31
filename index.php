@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost and found</title>
+    <?php include 'style.php'; ?>
+    <?php include 'links.php'; ?>
 </head>
 <body>
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                <img src="" alt=""/>
+                <img src="https://www.kindpng.com/picc/m/128-1280187_github-logo-png-github-transparent-png.png" alt=""/>
                 <h3>Welcome</h3>
                 <p> Please fill all the details carefully. This form can change your life.</p>
                 <a href="display.php">Check form</a> <br/>
@@ -29,7 +31,7 @@
                                                 <input type="email" class="form-control" placeholder="Enter your email" name="email" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="file" class="form-control" placeholder="Enter your file" name="file" value="" required/>
+                                                <input type="file" class="form-control" placeholder="Enter your qualification" name="photo" value="" required/>
                                             </div>
                                             <div class="col-md-6">
                                             <div class="form-group">
