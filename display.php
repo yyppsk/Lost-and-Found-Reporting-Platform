@@ -5,6 +5,7 @@
      <?php include 'links.php' ?>
      <?php include 'style.php' ?>
     <style>
+        
         body{
             background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png);
             background-repeat: repeat;
@@ -18,9 +19,9 @@
 <body>
 <div class="container">
      <div class="row d-flex justify-content-center">
-          <div class="col-lg-11 col-12">
+          <div class="col-lg-0 col-0">
                <div class="table-responsive">
-               <table class="table text-center table-bordered text-black">
+               <table class="table text-center table-bordered text-white">
                     <thead class="bg-dark text-white">
                          <tr>
                              <th class="py-3 text-white " >Serial</th>
@@ -43,11 +44,11 @@
                     ?>
                     
                     <tr>
-                        <td> <font color=black size='5pt'> <?php echo $result['id']; ?> </td>
-                        <td> <font color=black size='5pt'><?php echo $result['username']; ?> </td>
-                        <td> <font color=black size='5pt'><?php echo $result['email']; ?> </td>
-                        <td> <font color=black size='5pt'><?php echo $result['degree']; ?> </td>
-                        <td> <font color=black size='5pt'><?php echo $result['lang']; ?> </td>
+                        <td> <font color=white size='5pt'> <?php echo $result['id']; ?> </td>
+                        <td> <font color=white size='5pt'><?php echo $result['username']; ?> </td>
+                        <td> <font color=white size='5pt'><?php echo $result['email']; ?> </td>
+                        <td> <font color=white size='5pt'><?php echo $result['degree']; ?> </td>
+                        <td> <font color=white size='5pt'><?php echo $result['lang']; ?> </td>
                         <td> <img src="<?php echo $result['pic']; ?>" width="300" height="300"> </td>
                     </tr>
                     
