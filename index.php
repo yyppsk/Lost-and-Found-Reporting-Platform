@@ -19,7 +19,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id = "home" role = "tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading"> Apply for web developer post</h3>
-                                <form action="upload.php> method="POST" enctype="multipart/form-data">
+                                <form action="upload.php" method="POST" enctype="multipart/form-data">
                                     <div class="row register-form">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -39,7 +39,7 @@
                                                 <input type="text" class="form-control" placeholder="Enter your lang" name="language" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="submit" class="btnRegister" placeholder="Submit" value="Register"/>
+                                                <input type="submit" class="btnRegister" placeholder="submit" value="Register"/>
                                             </div>
                                         </div>
                                     </div>

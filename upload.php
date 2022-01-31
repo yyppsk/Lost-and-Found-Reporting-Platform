@@ -8,7 +8,7 @@ $degree =$_POST['degree'];
 $lang = $_POST['lang'];
 $file = $_POST['photo'];
 
-print_r($file);
+//print_r($file);
 $filename= $file['name'];
 $filepath= $file['tmp_name'];
 $fileeror= $file['error'];
