@@ -8,7 +8,7 @@ $degree =$_POST['degree'];
 $lang = $_POST['lang'];
 $file = $_POST['photo'];
 
-//print_r($file);
+print_r($file);
 $filename= $file['name'];
 $filepath= $file['tmp_name'];
 $fileeror= $file['error'];
@@ -17,6 +17,6 @@ if($fileerror == 0){
     echo "$destfile";
 }
 }else{
-
-echo "No buttn has been clicked";
+//EDITED 2
+echo "No button has been clicked";
 }
