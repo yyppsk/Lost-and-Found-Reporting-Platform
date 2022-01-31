@@ -11,7 +11,7 @@ $file = $_FILES['photo'];
 //print_r($file);
 $filename= $file['name'];
 $filepath= $file['tmp_name'];
-$fileeror= $file['error'];
+$fileerror= $file['error'];
 if($fileerror == 0){
     $destfile = 'upload/'.$filename;
    // echo "$destfile";
@@ -24,7 +24,7 @@ if($fileerror == 0){
     else{
         echo "Not Inserted";
     }
-    header('location:index.php');
+    header('location:display.php');
 }
 }
 else{
