@@ -27,7 +27,7 @@
 
                     include 'dbcon.php';
 
-                    $selectquery = "select * from registration";
+                    $selectquery = "select * from people_list";
                     $query = mysqli_query($conn, $selectquery);
                     //$result = mysqli_fetch_array($query);
                     
