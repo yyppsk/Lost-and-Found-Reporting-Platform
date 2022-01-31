@@ -38,10 +38,10 @@
                                                 <input type="text" class="form-control" placeholder="Enter your qual" name="degree" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Enter your lang" name="language" value="" required/>
+                                                <input type="text" class="form-control" placeholder="Enter your lang" name="lang" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="submit" class="btnRegister" placeholder="submit" value="Register"/>
+                                                <input type="submit" class="btnRegister" name="submit" value="Register"/>
                                             </div>
                                         </div>
                                     </div>
