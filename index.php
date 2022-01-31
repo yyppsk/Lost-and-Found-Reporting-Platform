@@ -38,7 +38,7 @@
                             <input type="text" class="form-control" placeholder="Enter your qual" name="degree" value="" required/>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Enter your lang" name="language" value="" required/>
+                            <input type="text" class="form-control" placeholder="Enter your lang" name="language" value="" required/>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btnRegister" placeholder="Submit" value="Register"/>
