@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url(https://www.pngitem.com/pimgs/b/534-5347105_mountain-png.png);
+            background-repeat: repeat;
+            background-size: cover;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    </style>
     <title>Lost and found</title>
     <?php include 'style.php'; ?>
     <?php include 'links.php'; ?>
@@ -12,7 +23,7 @@
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                <img src="https://www.kindpng.com/picc/m/128-1280187_github-logo-png-github-transparent-png.png" alt=""/>
+                <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-square-512.png" width="50px" height="50px" alt=""/>
                 <h3>Welcome</h3>
                 <p> Please fill all the details carefully. This form can change your life.</p>
                 <a href="display.php">Check form</a> <br/>

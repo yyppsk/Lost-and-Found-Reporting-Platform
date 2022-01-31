@@ -4,9 +4,18 @@
      <title>Lost and Found : People</title>
      <?php include 'links.php' ?>
      <?php include 'style.php' ?>
+    <style>
+        body{
+            background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png);
+            background-repeat: repeat;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-
 <div class="container">
      <div class="row d-flex justify-content-center">
           <div class="col-lg-11 col-12">
@@ -14,12 +23,12 @@
                <table class="table text-center table-bordered text-black">
                     <thead class="bg-dark text-white">
                          <tr>
-                             <th class="py-3 text-white " >id</th>
+                             <th class="py-3 text-white " >Serial</th>
                              <th class="py-3 text-white ">Name</th>
                              <th class="py-3 text-white ">Email</th>
-                             <th class="py-3 text-white ">Degree</th> 
-                             <th class="py-3 text-white" >Lang</th>
-                             <th class="py-3 text-white" >Pic</th>
+                             <th class="py-3 text-white ">Details</th> 
+                             <th class="py-3 text-white" >City</th>
+                             <th class="py-3 text-white" >Picture</th>
                          </tr>
                     </thead>
                     <tbody>
