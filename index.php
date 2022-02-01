@@ -89,22 +89,22 @@
                                                 <input type="text" class="form-control" placeholder="Enter your name" name="username" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                            <label for="username">Email:</label>
+                                            <label for="email">Email:</label>
                                                 <input type="email" class="form-control" placeholder="Enter your email" name="email" value="" required/>
                                             </div>
                                             <div class="form-group">
-                                            <label for="username">Upload A picture of Missing person:</label>
+                                            <label for="photo">Upload A picture of Missing person:</label>
                                                 <input type="file" class="form-control" placeholder="Enter your qualification" name="photo" value="" required/>
                                             </div>
                                             <div class="col-md-12">
                                             <div class="form-group">
-                                            <label for="username">Details of Missing person</label>
+                                            <label for="degree">Details of Missing person</label>
                                                 <input type="text" class="form-control input-lg" placeholder="Contact Number and Other details" name="degree" value="" required/>
                                                 <span class="help-block">Physical features and other relevant information and Contact Number. Also mention the details of the Ward.</span>
                                             </div>
                                             <div class="form-group">
-                                            <label for="username">City</label>
-                                                <input type="text" class="form-control" placeholder="Enter your lang" name="lang" value="" required/>
+                                            <label for="lang">City</label>
+                                                <input type="text" class="form-control" placeholder="Enter City" name="lang" value="" required/>
                                             </div>
                                             <div class="form-group">
                                                 <input type="submit" class="btnRegister" name="submit" value="Register"/>
@@ -119,5 +119,18 @@
             </div>
         </div>
     </div>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61f9619fb9e4e21181bcf7a7/1fqr2an0a';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
