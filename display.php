@@ -9,14 +9,24 @@
         body{
             background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png);
             background-repeat: repeat;
-            padding-top: 50px;
             padding-bottom: 50px;
-            padding-right: 20px;
-            padding-left: 20px;
         }
     </style>
 </head>
 <body>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <h1 style="color:green; text-align:center">
+  <img src="/logo.svg" width="150px" height="150px" alt=""/>
+        LOST AND FOUND PLATFORM
+  </h1>
+    <p style="text-align:center">A Public open sourced platform to register the Mission people.</p>
+  </div>
+</div>
+<div class="alert alert-info alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Info!</strong> All MISSSING PEOPLE IF FOUND MUST BE REPORTED BACK "FOUND" TO UPDATE THE LIST!
+  </div>
 <div class="container">
      <div class="row d-flex justify-content-center">
           <div class="col-lg-0 col-0">
@@ -30,6 +40,7 @@
                              <th class="py-3 text-white ">Details</th> 
                              <th class="py-3 text-white" >City</th>
                              <th class="py-3 text-white" >Picture</th>
+                             <th class="py-3 text-white" >Time Added</th>
                          </tr>
                     </thead>
                     <tbody>
@@ -49,7 +60,8 @@
                         <td> <font color=white size='5pt'><?php echo $result['email']; ?> </td>
                         <td> <font color=white size='5pt'><?php echo $result['degree']; ?> </td>
                         <td> <font color=white size='5pt'><?php echo $result['lang']; ?> </td>
-                        <td> <img src="<?php echo $result['pic']; ?>" width="300" height="300"> </td>
+                        <td> <img src="<?php echo $result['pic']; ?>" width="150px" height="150px"> </td>
+                        <td> <font color=white size='5pt'><?php echo $result['Time']; ?> </td>
                     </tr>
                     
                     <?php
