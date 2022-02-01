@@ -64,8 +64,6 @@
   <button type="button" class="btn btn-primary">About Us</button>
   <button type="button" class="btn btn-primary">Source</button>
   <button type="button" class="btn btn-primary">HashInclude</button>
-    </div>
-  </div>
 </div>
 
 
