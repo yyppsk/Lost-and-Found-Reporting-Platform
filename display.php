@@ -55,13 +55,13 @@
                     ?>
                     
                     <tr>
-                        <td> <font color=white size='5pt'> <?php echo $result['id']; ?> </td>
-                        <td> <font color=white size='5pt'><?php echo $result['username']; ?> </td>
-                        <td> <font color=white size='5pt'><?php echo $result['email']; ?> </td>
-                        <td> <font color=white size='5pt'><?php echo $result['degree']; ?> </td>
-                        <td> <font color=white size='5pt'><?php echo $result['lang']; ?> </td>
+                        <td> <font color=black size='5pt'> <?php echo $result['id']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['username']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['email']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['degree']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['lang']; ?> </td>
                         <td> <img src="<?php echo $result['pic']; ?>" width="150px" height="150px"> </td>
-                        <td> <font color=white size='5pt'><?php echo $result['Time']; ?> </td>
+                        <td> <font color=black size='5pt'><?php echo $result['Time']; ?> </td>
                     </tr>
                     
                     <?php
