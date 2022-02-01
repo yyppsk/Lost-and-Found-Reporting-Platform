@@ -7,7 +7,7 @@
     <style>
         
         body{
-            background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png);
+            background-image: "/escheresque_ste.png";
             background-repeat: repeat;
             padding-bottom: 50px;
         }
