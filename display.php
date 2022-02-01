@@ -20,7 +20,7 @@
   <img src="/logo.svg" width="150px" height="150px" alt=""/>
         LOST AND FOUND PLATFORM
   </h1>
-    <p style="text-align:center">A Public open sourced platform to register the Mission people.</p>
+    <p style="text-align:center">A Public open sourced platform to register the Missing people.</p>
   </div>
 </div>
 <div class="alert alert-info alert-dismissible fade show">
