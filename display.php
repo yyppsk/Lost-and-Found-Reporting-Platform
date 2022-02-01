@@ -7,7 +7,7 @@
     <style>
         
         body{
-            background-image: "/escheresque_ste.png";
+            background-image: url(https://lostandfound.gq/escheresque_ste.png);
             background-repeat: repeat;
             padding-bottom: 50px;
         }
