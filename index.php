@@ -64,13 +64,6 @@
   <button type="button" class="btn btn-primary">About Us</button>
   <button type="button" class="btn btn-primary">Source</button>
   <button type="button" class="btn btn-primary">HashInclude</button>
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-       Sony
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Tablet</a>
-      <a class="dropdown-item" href="#">Smartphone</a>
     </div>
   </div>
 </div>
