@@ -5,12 +5,6 @@
      <?php include 'links.php' ?>
      <?php include 'style.php' ?>
     <style>
-        
-        body{
-            background-image: url(https://lostandfound.gq/escheresque_ste.png);
-            background-repeat: repeat;
-            padding-bottom: 50px;
-        }
     </style>
 </head>
 <body>
