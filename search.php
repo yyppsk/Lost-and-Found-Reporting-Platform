@@ -153,7 +153,7 @@ if (isset($_GET['search'])) {
             echo "<div class='search_result' style='padding:10px'> 						
                 <h3>$result_title</a></h3>
                 <p>Found this person? Report Here.</p>
-                <div class='my_button'> <span><a href='/index.php'>I know $result_title</a></span></div>
+                <div class='my_button'> <span><a href='https://lostandfoundsys.tawk.help/'>I know $result_title</a></span></div>
                 <br>
                 <h4>Description about $result_title</h4>
                 <article style='border: solid 1px; border-radius:4px; color: black;'> $result_desc </article>
