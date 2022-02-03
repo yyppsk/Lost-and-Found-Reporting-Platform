@@ -169,7 +169,7 @@ if (isset($_GET['search'])) {
     }
 } else {
     echo" <div class='alert alert-danger'>";
-        echo" <h2>NNo search query provided. Please try your search again.</h2>";
+        echo" <h2>No search query provided. Please try your search again.</h2>";
         echo" </div>";
 }
 ?>
