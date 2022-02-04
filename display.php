@@ -79,7 +79,24 @@
                         <td> <font color=#000 size='4vw'><?php echo $row['email']; ?> </td>
                         <td> <font color=#000 size='4vw'><?php echo $row['degree']; ?> </td>
                         <td> <font color=#000 size='4vw'><?php echo $row['lang']; ?> </td>
-                        <td> <img src="<?php echo $row['pic']; ?>" width="150px" height="150px"> </td>
+                        <td><?php   
+                        if($row['State']==0){  
+                        echo "
+                        <span style='font-size: 3rem;'>
+                        <span style='color: #4BB543; align-items:center;'>
+                        <i class='fas fa-user-check fa-sm' title='Person is found!'></i>
+                      </span>
+                      ";  
+                        }else{  
+                        echo "
+                        <span style='font-size: 3rem;'>
+                        <span style='color: #FA113D; align-items:center;'>
+                        <i class='fas fa-user-check fa-sm' title='Person is Not found!'></i>
+                      </span>
+                        "; 
+                        }  
+                        ?>
+                        <img src="<?php echo $row['pic']; ?>" width="150px" height="150px"> </td>
                         <td> <font color=#000 size='5pt'><?php echo $row['Time']; ?> </td>
                     </tr>
                     
