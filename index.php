@@ -13,11 +13,6 @@
     <meta property="og:url" content="https://lostandfound.gq/index.php">
     <meta name="twitter:card" content="summary_large_image">
     <style>
-        body{
-            background-image: url(https://www.pngitem.com/pimgs/b/534-5347105_mountain-png.png);
-            background-repeat: repeat;
-            background-size: cover;
-        }
     </style>
     <title>Lost and found</title>
     <?php include 'style.php'; ?>
