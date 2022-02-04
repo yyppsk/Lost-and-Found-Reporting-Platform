@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report.Our platform releases the fetching rate of a person. With data being on public system it's easier and faster for recognition of missing person by general public.">
+    <meta name="keywords" content="Missing, lost and found, lost, missing, lostandfound,platform">
+    <meta name="author" content="Pranjal Pratap Singh, Riya, Sonam, Utkarsh, HashInclude">
     <style>
         body{
             background-image: url(https://www.pngitem.com/pimgs/b/534-5347105_mountain-png.png);
