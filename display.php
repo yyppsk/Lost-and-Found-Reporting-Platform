@@ -93,11 +93,11 @@
                         echo "
                         <span style='font-size: 3rem;'>
                         <span style='color: #FA113D; align-items:center;'>
-                        <i class='fas fa-user-check fa-sm' title='Person is Not found!'></i>
+                        <a href='https://lostandfoundsys.tawk.help/' style='color: #FA113D;'><i class='fas fa-user-check fa-sm' title='Person is Not found! Report them here.'></i></a>
                       </span>
                         "; 
                         }  
-                        ?>  
+                        ?>   
                       </td>
                         <td> <font color=#000 size='5pt'><?php echo $row['Time']; ?> </td>
                     </tr>
