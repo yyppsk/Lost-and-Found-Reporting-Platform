@@ -8,6 +8,10 @@
     <meta name="description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report.Our platform releases the fetching rate of a person. With data being on public system it's easier and faster for recognition of missing person by general public.">
     <meta name="keywords" content="Missing, lost and found, lost, missing, lostandfound,platform">
     <meta name="author" content="Pranjal Pratap Singh, Riya, Sonam, Utkarsh, HashInclude">
+    <meta property="og:title" content="Lost and Found : by HashInclude">
+    <meta property="og:image" content="https://lostandfound.gq//images/favicon.jpg">
+    <meta property="og:url" content="https://lostandfound.gq/index.php">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         body{
             background-image: url(https://www.pngitem.com/pimgs/b/534-5347105_mountain-png.png);
