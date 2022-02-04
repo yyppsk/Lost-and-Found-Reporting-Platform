@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <script src="https://kit.fontawesome.com/1bf6eef544.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -79,7 +80,8 @@
                         <td> <font color=#000 size='4vw'><?php echo $row['email']; ?> </td>
                         <td> <font color=#000 size='4vw'><?php echo $row['degree']; ?> </td>
                         <td> <font color=#000 size='4vw'><?php echo $row['lang']; ?> </td>
-                        <td><?php   
+                        <td><img src="<?php echo $row['pic']; ?>" width="150px" height="150px">
+                        <?php   
                         if($row['State']==0){  
                         echo "
                         <span style='font-size: 3rem;'>
@@ -95,8 +97,8 @@
                       </span>
                         "; 
                         }  
-                        ?>
-                        <img src="<?php echo $row['pic']; ?>" width="150px" height="150px"> </td>
+                        ?>  
+                      </td>
                         <td> <font color=#000 size='5pt'><?php echo $row['Time']; ?> </td>
                     </tr>
                     
