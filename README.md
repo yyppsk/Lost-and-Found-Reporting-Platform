@@ -10,7 +10,6 @@ Our platform releases the fetching rate of a person. With data being on public s
 We have used PHP as our base language to design most components. We haved deployed the application over cloud platform.
 # Presentation
 
-![alt text](https://github.com/yyppsk/Lost-and-Found-Reporting-Platform/blob/main/images/1.jpg?raw=true)
 ![alt text](https://github.com/yyppsk/Lost-and-Found-Reporting-Platform/blob/main/images/2.jpg?raw=true)
 ![alt text](https://github.com/yyppsk/Lost-and-Found-Reporting-Platform/blob/main/images/3.jpg?raw=true)
 ![alt text](https://github.com/yyppsk/Lost-and-Found-Reporting-Platform/blob/main/images/4.jpg?raw=true)
