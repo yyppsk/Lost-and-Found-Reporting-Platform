@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report.Our platform releases the fetching rate of a person. With data being on public system it's easier and faster for recognition of missing person by general public.">
-    <meta name="keywords" content="Missing, lost and found, lost, missing, lostandfound,platform">
-    <meta name="author" content="Pranjal Pratap Singh, Riya, Sonam, Utkarsh, HashInclude">
-    <meta property="og:title" content="Lost and Found : by HashInclude">
-    <meta property="og:image" content="https://lostandfound.gq//images/favicon.jpg">
-    <meta property="og:url" content="https://lostandfound.gq/index.php">
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Primary Meta Tags -->
+    <title>Lost and Found: by HashInclude</title>
+    <meta property="og:title" content="Lost and Found: by HashInclude">
+<meta property="og:site_name" content="Lost and Found">
+<meta property="og:url" content="https://lostandfound.gq/">
+<meta property="og:description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report. Our platform releases the fetching rate of a person. With data being on the public system,">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://lostandfound.gq/images/bannerlostandfound.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lostandfound.gq/">
+    <meta property="og:title" content="Lost and Found: by HashInclude">
+    <meta property="og:description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report. Our platform releases the fetching rate of a person. With data being on the public system, it's easier and faster for recognition of a missing person by the general public.">
+    <meta property="og:image" content="https://lostandfound.gq/images/bannerlostandfound.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostandfound.gq/">
+    <meta property="twitter:title" content="Lost and Found: by HashInclude">
+    <meta property="twitter:description" content="We have built a platform where anyone with access to the internet can register for a Missing person's report. Our platform releases the fetching rate of a person. With data being on the public system, it's easier and faster for recognition of a missing person by the general public.">
+    <meta property="twitter:image" content="https://lostandfound.gq/images/bannerlostandfound.png">
     <style>
     </style>
     <title>Lost and found</title>
