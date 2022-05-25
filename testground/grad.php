@@ -11,8 +11,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+<section>
+  <h1>SECTION 1</h1>
+</section>
 <style>
+   section {
+  width: 100%;
+  height: 100vh;
+}
    .gradient {
   position: fixed;
   height: 100%;
@@ -30,6 +36,41 @@
     height: 100%;
     z-index: 0;
     }
+    .flex-container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        padding: auto;
+    }
+    * {
+    margin: 0; padding: 0;
+}
+html, body, #container {
+    height: 100%;
+}
+header {
+    height: 10%;
+    background: gray;
+    max-height:50px;
+}
+main {
+    height: 90%;
+    background: green;
+}
+.half {
+    height: 50%;
+}
+.half:first-child {
+    background: blue;
+}
+.half:last-child {
+    background: yellow;
+}
+.contain{
+    margin-bottom: 30vh;
+    align-items: center;
+}
     </style>
 <?php
     $server = "localhost";
@@ -47,7 +88,10 @@
         echo" </div>";
     }
     echo" <div class='alert alert-success'style='position: absolute;'>";
-    echo" <strong>__Connected successfully__</strong><br>Database fetched succesfully.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+    echo'<div class="contain">
+        <h1>__Connected successfully__</h1>
+        <p align="center">Database fetched succesfully</p>
+        </div>';
     echo"<script>",
         "var localLabels = [];",
         "</script>";
@@ -87,7 +131,6 @@
       align-items: center;
       flex-direction: column;
     }
-
     canvas {
       position: absolute;
       top: 0;
@@ -99,13 +142,12 @@
 
     body {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
     font-family: Avenir, sans-serif;
     color: #111;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    justify-content: center;
     }
 
     a {
@@ -115,7 +157,7 @@
 
     .cta {
     position: absolute;
-    margin: auto;
+    margin-top: 30vh;
     padding: 19px 22px;
     transition: all 0.2s ease;
     }
@@ -168,8 +210,35 @@
 <!-- On laoding of Below section, a function call will be made to Javscript to load the FaceApi for further execution -->
 <body onload="load()">
 <?php header('Access-Control-Allow-Origin: *'); ?>
-  <div class="inputimage" style="position: absolute;">
-    <input type="file" id="imageUpload" style="position:absolute;">
+<style>
+    .file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    }
+    .imgup label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    }
+    
+    </style>
+    
+  <div class="imgup" style="position: absolute;">
+    <input type="file" id="imageUpload" class="file"">
+    <label for="imageUpload">Select Image</label>
   </div>
     <script>
   //This function is where the Main Machine learning task is performed
@@ -264,6 +333,7 @@
 <!-- Inspiration: https://dribbble.com/shots/4397812-Click-Me -->
 <!-- Click Me button -->
 <?php
+
     function displayrecent() {
     $server = "localhost";
     $user = "root";
@@ -271,25 +341,26 @@
     $db = "lostandfound";
     // Create connection
     $conn = mysqli_connect($server,$user,$password,$db);
-    $sql = "SELECT Name FROM lostpeople";
+    $sql = "SELECT Name,city FROM lostpeople";
     $result = mysqli_query($conn, $sql);
         echo "<br>";
     echo "<table border='1'>";
-    while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+    while ($rows = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         //echo "<tr>";
-        foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        foreach ($rows as $row) { // I you want you can right this line like this: foreach($row as $value) {
             //echo "<td>" . $value . "</td>";
             echo '<script>',
-                 'localLabels.push(','"',$value,'"',');',
+                 //'localLabels.push(','"',$value,'"',');',
                  '</script>';
-            echo '<div class="container">
+            echo '<div class="flex-container"> 
+            <div class="container">
             <div class="card">
               <div class="image-box">';
-                echo'<img src="labeled_images/',$value,'/','0.jpg','",alt="">
+                echo'<img src="labeled_images/',$rows['Name'],'/','0.jpg','",alt="">
               </div>
               <div class="content">
                 <div class="details">
-                  <h2>Smith Brown <br /><span>Senior UI/UX Designer</span></h2>
+                  <h2>',$rows['city'],'<br /><span>Senior UI/UX Designer</span></h2>
                   <div class="data">
                     <h3>342<br /><span>Posts</span></h3>
                     <h3>120k<br /><span>Followers</span></h3>
@@ -302,6 +373,7 @@
                 </div>
               </div>
             </div>
+          </div>
           </div>'; 
         }
         //echo "</tr>";
