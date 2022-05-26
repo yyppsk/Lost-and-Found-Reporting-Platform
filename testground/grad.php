@@ -15,7 +15,7 @@
   <h1>SECTION 1</h1>
 </section>
 <style>
-   section {
+  .section {
   width: 100%;
   height: 100vh;
 }
@@ -296,15 +296,6 @@ main {
   }
 
     function loadLabeledImages() {
-  const labels = [
-    "Black Widow",
-    "Captain America",
-    "Captain Marvel",
-    "Hawkeye",
-    "Jim Rhodes",
-    "Thor",
-    "Tony Stark",
-  ];
     let newArray = storedLabels.slice();
     console.log({newArray});
     //document.body.append(localStorage.getItem('test'));
