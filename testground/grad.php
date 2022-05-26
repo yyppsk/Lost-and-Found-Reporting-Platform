@@ -13,6 +13,8 @@
 <body>
 <section>
   <h1 style="text-align: center">FACE RECOGNITION MODEL</h1>
+  <h1 style="text-align: center" id="Loading"></h1>
+  <h1 style="text-align: center" id="Loaded"></h1>
 </section>
 <style>
     section {
@@ -256,6 +258,12 @@
       <h2 style="text-align: center" id="namePerson"> </h2>
 </section>
     <script>
+      const node1 = document.createElement("h1");
+      const textnode1 = document.createTextNode("Loading..");
+      node1.appendChild(textnode1);
+      document.getElementById("Loading").appendChild(node1);
+      </script>
+    <script>
   //This function is where the Main Machine learning task is performed
     function load()
     {
@@ -274,7 +282,15 @@
       const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
       let image;
       let canvas;
-      //document.body.append("Loaded");
+
+      
+      const node = document.createElement("h1");
+      const textnode = document.createTextNode("Loaded!");
+      node.appendChild(textnode);
+      document.getElementById("Loaded").appendChild(node);
+      const loadremoval = document.getElementById("Loading");
+      loadremoval.removeChild(loadremoval.children[0]);
+      
       //var elem = document.createElement('div');
       //elem.style.cssText = 'position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000';
       //document.body.appendChild(elem);
