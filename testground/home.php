@@ -203,76 +203,100 @@
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.btn-shine {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 12px 48px;
-  color: #fff;
-  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 50px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-@-moz-keyframes shine {
-  0% {
+    }
+    .btn-shine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 48px;
+    color: #fff;
+    background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
     background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    font-size: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    }
+    @-moz-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 180px;
+    }
+    }
+    @-webkit-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 180px;
+    }
+    }
+    @-o-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 180px;
+    }
+    }
+    @keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 180px;
+    }
+    }
     </style>
 <body>
     <div>
-    </div>
-    <a href="/testground/" class="btn-shine" target="_blank">Finding Someone?</a>
-
-   
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        var count = 0;
+        function pageScroll() {
+            if(count > 120){
+            return;
+        }
+        window.scrollBy(0,35);
+        scrolldelay = setTimeout(pageScroll,70);
+        count++;
+        console.log(count);
+    }
+        $(document).ready(function () {
+            // Hide the div
+            $("#div1").hide();
+            $("#div2").hide();
+            // Show the div after 5s
+            $("#div1").delay(3000).fadeIn(100);
+            $("#div2").delay(5000).fadeIn(100);
+        });  
+    </script>
+    <div id="div1" style="display:none"><a href="./searchpeople.php" class="btn-shine" target="_blank">Finding Someone?</a></div>
+    <div id="div2" style="display:none"><a href="./dashboard.php" class="btn-shine" target="_blank">Found Someone?</a></div>
+    <span id="count"></span>
+    <script>
+        pageScroll();
+    </script>
+</div>
 </body>
 </html>
