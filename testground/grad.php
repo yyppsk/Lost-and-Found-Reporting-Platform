@@ -12,67 +12,68 @@
 </head>
 <body>
 <section>
-  <h1>SECTION 1</h1>
+  <h1 style="text-align: center">FACE RECOGNITION MODEL</h1>
 </section>
 <style>
-  .section {
-  width: 100%;
-  height: 100vh;
-}
-   .gradient {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-    }
-    .gradient svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    section {
     width: 100%;
-    height: 100%;
-    z-index: 0;
+    height: 100vh;
     }
-    .flex-container {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin: 40px;
-        padding: auto;
-    }
-    * {
-    margin: 0; padding: 0;
-}
-html, body, #container {
+    .gradient {
+    position: fixed;
     height: 100%;
-}
-header {
-    height: 10%;
-    background: gray;
-    max-height:50px;
-}
-main {
-    height: 90%;
-    background: green;
-}
-.half {
-    height: 50%;
-}
-.half:first-child {
-    background: blue;
-}
-.half:last-child {
-    background: yellow;
-}
-.contain{
-    margin-bottom: 30vh;
-    align-items: center;
-}
-    </style>
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+      }
+      .gradient svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      }
+      .flex-container {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          margin: 40px;
+          padding: auto;
+      }
+      * {
+      margin: 0; padding: 0;
+  }
+  html, body, #container {
+      height: 100%;
+  }
+  header {
+      height: 10%;
+      background: gray;
+      max-height:50px;
+  }
+  main {
+      height: 90%;
+      background: green;
+  }
+  .half {
+      height: 50%;
+  }
+  .half:first-child {
+      background: blue;
+  }
+  .half:last-child {
+      background: yellow;
+  }
+  .contain{
+      margin-bottom: 30vh;
+      align-items: center;
+  }
+  </style>
 <?php
+    //This code Snippet Creates local array for Models
     $server = "localhost";
     $user = "root";
     $password = "123123@Blink";
@@ -97,17 +98,16 @@ main {
         "</script>";
     echo" </div>";
     $sql = "SELECT Name FROM lostpeople";
-    $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
+    $result = mysqli_query($conn, $sql);
     echo "<br>";
     //echo "<table border='1'>";
-    while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+    while ($row = mysqli_fetch_assoc($result)) { 
         echo "<tr>";
-        foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        foreach ($row as $field => $value) { // foreach($row as $value) {
             //echo "<td>" . $value . "</td>";
             echo '<script>',
                  'localLabels.push(','"',$value,'"',');',
                  '</script>';
-            // I just did not use "htmlspecialchars()" function. 
         }
         echo "</tr>";
     }
@@ -119,8 +119,17 @@ main {
          "</script>";
          //var storedColors = JSON.parse(localStorage.getItem("my_colors")); 
     ?>
-<!-- Styling For Click Me Button -->
+<!-- .container Result Styling is for Displaying Result in Position with absolute position
+      Canvas position is with absolute
+    
+      Call to Action Styling-->
 <style>
+    .containerresult{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: center;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -132,9 +141,8 @@ main {
       flex-direction: column;
     }
     canvas {
+      display: flex;
       position: absolute;
-      top: 0;
-      left: 0;
     }
     html, body {
   height: 100%;
@@ -205,11 +213,9 @@ main {
     transform: scale(0.96);
     }
     </style>
-</head>
 
 <!-- On laoding of Below section, a function call will be made to Javscript to load the FaceApi for further execution -->
 <body onload="load()">
-<?php header('Access-Control-Allow-Origin: *'); ?>
 <style>
     .file {
     opacity: 0;
@@ -240,6 +246,15 @@ main {
     <input type="file" id="imageUpload" class="file"">
     <label for="imageUpload">Select Image</label>
   </div>
+  <section>
+      <h2 style="text-align: center">
+          Query Generation Takes below :
+      </h2>
+      <h1 style="text-align: center" id="notFound"> </h1>
+      <div id="containerresult" class="containerresult"></div>
+      <h1 style="text-align: center" id="Found"> </h1>
+      <h2 style="text-align: center" id="namePerson"> </h2>
+</section>
     <script>
   //This function is where the Main Machine learning task is performed
     function load()
@@ -267,9 +282,17 @@ main {
       if (image) image.remove();
       if (canvas) canvas.remove();
       image = await faceapi.bufferToImage(imageUpload.files[0]);
-      container.append(image);
+      document.getElementById('containerresult').append(image);
       canvas = faceapi.createCanvasFromMedia(image);
-      container.append(canvas);
+      document.getElementById('containerresult').append(canvas);
+
+
+      //var image2 = new Image();
+      //image2 = await faceapi.bufferToImage(imageUpload.files[0]);
+      //document.getElementById('containerresult').appendChild(image2);
+      //document.getElementById('containerresult').appendChild(canvas);
+      
+
       const displaySize = { width: image.width, height: image.height };
       faceapi.matchDimensions(canvas, displaySize);
       const detections = await faceapi
@@ -280,11 +303,78 @@ main {
       const results = resizedDetections.map((d) =>
         faceMatcher.findBestMatch(d.descriptor)
       );
+      
+      console.log(localStorage.getItem(results));
+
+      //Handling of Person Found or Not Found
+      var stringArray = results.toString().split(/(\s+)/);
+      var surname = "";
+      if(stringArray[1] == " "){
+        surname = stringArray[2];
+      }
+      var final = stringArray[0] + " " + surname;
+      console.log(stringArray);
+      console.log(final);
+      
+      //CREATING NODE 1 Name Person
+
+      const node = document.createElement("h1");
+      const textnode = document.createTextNode("____");
+      node.appendChild(textnode);
+      document.getElementById("namePerson").appendChild(node);
+      //CREATING NODE 2 Not Found
+      const node2 = document.createElement("h1");
+      const textnode2 = document.createTextNode("____");
+      node2.appendChild(textnode2);
+      document.getElementById("notFound").appendChild(node2);
+
+
+      localStorage.setItem('Result2',stringArray[0]);
+
+      if(stringArray[0] == "unknown"){
+
+        const element = document.getElementById("notFound").children[0];
+
+        const newNode = document.createTextNode("Sorry Person not Found in Our database!");
+
+        element.replaceChild(newNode, element.childNodes[0]);
+        
+        const element2 = document.getElementById("namePerson").children[0];
+
+        const newNode2 = document.createTextNode("____");
+
+        element2.replaceChild(newNode2, element2.childNodes[0]);
+
+      }
+      else{
+        const element = document.getElementById("notFound").children[0];
+
+        const newNode = document.createTextNode("____");
+
+        element.replaceChild(newNode, element.childNodes[0]);
+
+
+
+        const element2 = document.getElementById("namePerson").children[0];
+
+        const newNode2 = document.createTextNode(final);
+
+        element2.replaceChild(newNode2, element2.childNodes[0]);
+      }
+
+      const dotremoval = document.getElementById("namePerson");
+      dotremoval.removeChild(dotremoval.children[1]);
+
+      const dotremoval2 = document.getElementById("notFound");
+      dotremoval2.removeChild(dotremoval2.children[1]);
+      
 
       //Results for the best match
       localStorage.setItem('Result',results);
-      console.log(localStorage.getItem('Result'));
+      //console.log(localStorage.getItem('Result'));
 
+
+    
       results.forEach((result, i) => {
         const box = resizedDetections[i].detection.box;
         const drawBox = new faceapi.draw.DrawBox(box, {
@@ -322,9 +412,8 @@ main {
     }
     </script>
 <!-- Inspiration: https://dribbble.com/shots/4397812-Click-Me -->
-<!-- Click Me button -->
+<!-- This displays Recent items which are added to Database -->
 <?php
-
     function displayrecent() {
     $server = "localhost";
     $user = "root";
@@ -382,6 +471,18 @@ main {
     </svg>
     </a>
     <!-- End of Click Me button -->
+<style>
+  img {
+    width: 250px;
+    height: 30%;
+    border: 4px solid #eee;
+    border-radius: 4px;
+    border-style: outset;
+  }
+            
+    </style>
+
+
 <!-- Card Css -->
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");

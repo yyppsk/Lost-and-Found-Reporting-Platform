@@ -60,32 +60,21 @@
         <form action = "" method = "post">
             <label for = "mlname"> First Name for ML Model <br></label>
             <input type="text" class ="form-control" name = "add" id = "mlname" placeholder="FaceID Name" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter only the first name of the Person">
-            <input class="btn btn__primary" type = "submit" id="model" name = "submit" value = "Load Model" />
-            <label for = "model"> <em><strong>Please Load First Name for ML Model first*</strong></em></label>
-            <br><br>
-            <label for = "model"> Full Name of the lost person</label><br><br>
             <input type="text" class="form-control" id = "fullname" placeholder="Full Name Lost Person" data-bs-toggle="tooltip" data-bs-placement="top" title="Full Name of the person Lost Person">
-            <input type="email" class="form-control" id = "email" placeholder="Your Email..">
-            <br><br>
-            <label for = "model"> City and State Where person was lost.</label><br><br>
-            <input type="text" class="form-control" id = "city" placeholder="City Where person lost">
+            <input type="email" class="form-control" id = "email" placeholder="Email..">
+            <input type="text" class="form-control" id = "city" placeholder="City">
             <input type="text" class="form-control" id = "state" placeholder="State">
-            <br><br>
-            <label for = "model"> Give Brief Description (Physical Features, clothing, etc.)</label><br><br>
-            <input type="text" class="form-control" id = "desc" placeholder="Description of Person">
-            <br><br>
-            <label for = "model"> Provide Your Valid ID for Verification Purposes.</label><br><br>
+            <input type="text" class="form-control" id = "desc" placeholder="Description">
             <input type="file" class="form-control" id = "id" placeholder="ID Verification">
+            <input class="btn btn__primary" type = "submit" name = "submit" value = "Create directory" />
+            <input class="btn btn__secondary" type = "submit" name = "submit" value = "Register" />
+            </div>
             <div class="checkbox">
-            <label for = "checkbox-1"> Do you agree to Continue?</label>
             <div class="checkbox__1">
-                <input id="checkbox-1" type="checkbox" required>
+                <input id="checkbox-1" type="checkbox">
                 <label for="checkbox-1">
                 <i class="material-icons">done</i></label>
             </div>
-            </div>
-            <input class="btn btn__secondary" type = "submit" name = "submit" value = "Register" />
-
             </div>
         </form>
         <?php 
