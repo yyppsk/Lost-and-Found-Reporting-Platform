@@ -40,7 +40,6 @@ html {
 
 .components {
   width: 75rem;
-  height: 40rem;
   border-radius: 3rem;
   box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
     -0.2rem -0.2rem 1.8rem var(--white);
@@ -120,11 +119,9 @@ html {
 
 /*  CHECKBOX  */
 .checkbox {
-  grid-column: 1/2;
-  display: grid;
-  grid-template-columns: repeat(2, 6rem);
-  grid-gap: 3rem;
-  justify-content: center;
+  display: flex;
+  grid-template-columns: repeat(2, 14rem);
+  align-items: center;
 }
 .checkbox input {
   display: none;
@@ -133,7 +130,8 @@ html {
 .checkbox__2 {
   width: 6rem;
   display: flex;
-  justify-content: center;
+  margin: 2vh;
+  justify-content: flex-start;
 }
 .checkbox__1 label,
 .checkbox__2 label {
