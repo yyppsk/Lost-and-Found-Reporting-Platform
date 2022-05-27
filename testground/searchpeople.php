@@ -468,7 +468,7 @@
                 </div>
                 <div class="content">
                   <div class="details">
-                    <h2><?php echo $row['Name']; ?><br /><span><?php echo $row['state']; ?></span></h2>
+                    <h2><?php echo $row['Name']; ?><br /><span><?php echo $row['city'].','.$row['state']; ?></span></h2>
                     <div class="data">
                       <h3><br /><span class="text"><?php echo $row['Description']; ?></span></h3>
                     </div>
