@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="/testground/face-api.min.js"> //face Api gets loaded here</script>
     <title>Document</title>
 </head>
@@ -15,7 +16,7 @@
   <h1 style="text-align: center">FACE RECOGNITION MODEL</h1>
   <h1 style="text-align: center" id="Loading"></h1>
   <h1 style="text-align: center" id="Loaded"></h1>
-</section>
+  </section>
 <style>
     section {
     width: 100%;
@@ -73,7 +74,7 @@
       margin-bottom: 30vh;
       align-items: center;
   }
-  </style>
+    </style>
 <?php
     //This code Snippet Creates local array for Models
     $server = "localhost";
@@ -120,7 +121,8 @@
          "storedLabels = JSON.parse(storedLabels);",
          "</script>";
          //var storedColors = JSON.parse(localStorage.getItem("my_colors")); 
-    ?>
+  ?>
+
 <!-- .container Result Styling is for Displaying Result in Position with absolute position
       Canvas position is with absolute
     
@@ -149,7 +151,6 @@
     html, body {
   height: 100%;
     }
-
     body {
     display: flex;
     flex-direction: row;
@@ -258,6 +259,8 @@
       <h2 style="text-align: center" id="namePerson"> </h2>
 </section>
     <script>
+
+      //Creates Loading Animation
       const node1 = document.createElement("h1");
       const textnode1 = document.createTextNode("Loading..");
       node1.appendChild(textnode1);
@@ -479,7 +482,7 @@
         displayrecent();
     }
     ?>
-    <a href="grad.php?name=true"  class="cta">
+    <a href="searchpeople.php?name=true"  class="cta">
     <span>Load Recent</span>
     <svg width="13px" height="10px" viewBox="0 0 13 10">
         <path d="M1,5 L11,5"></path>
@@ -646,14 +649,14 @@
       <rect width="200%" height="150%" x="-50%" y="30%" fill="url(#gradient1c)"></rect>
       <defs>
         <radialGradient id="gradient1a">
-          <stop offset="0%" stop-color="#F2C9C9">
+          <stop offset="40%" stop-color="#F2C9C9">
             <animate attributeName="stop-color" values="#F2C9C9;#FFFFFF;#DCD5F5;#FFE7C1;#FFFFFF;#FFE7C1;#F2C9C9" dur="20s" repeatCount="indefinite">
             </animate>
           </stop>
           <stop offset="100%" stop-color="#FFFFFF"></stop>
         </radialGradient>
         <radialGradient id="gradient1b">
-          <stop offset="0%" stop-color="#CBEBF0">
+          <stop offset="40%" stop-color="#CBEBF0">
             <animate attributeName="stop-color" values="#CBEBF0;#DCD5F5;#FFFFFF;#CBEBF0;#DCD5F5;#FFFFFF;#CBEBF0" dur="20s" repeatCount="indefinite">
             </animate>
           </stop>
@@ -669,5 +672,42 @@
       </defs>
     </svg>
   </div>
+  <style>
+    /* Footer */
+
+    .footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 60px;
+    background-color: rgba(218, 213, 240, 0.30);
+    }
+    .footer-text-left {
+    padding: 15px;
+    font-size: 25px;
+    padding-left: 40px;
+    float: left;
+    word-spacing: 20px;
+    }
+    .footer:hover {
+    background-color:rgba(218, 213, 240, 0.73);
+    }
+    a.menu:hover {
+        font-size: 22px;
+    }
+    .fa-cog:hover {
+    color: #ac7ed6;
+    }
+    .fa-home:hover {
+    color: #ac7ed6;
+    }
+    </style>
+    <div class="footer">
+    <p class="footer-text-left">
+    <a href="index.html" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
+    <a href="index.html" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
+    </p>
+</div>
 </body>
 </html>
