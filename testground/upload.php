@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-    header("url=thepage.php;refresh:5");
+    
 // Include the database configuration file 
 $uploads_dir = "./faceid";
 include_once 'config/dbConfig.php'; 
@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
     $city=$_POST['City'];
     $state=$_POST['State'];
     $desc=$_POST['Description'];
+    $imagestored = "";
     $targetDir = ""; 
     $allowTypes = array('jpg','png','jpeg','gif'); 
     $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = ''; 
@@ -37,6 +38,7 @@ if(isset($_POST['submit'])){
                 // Upload file to server
                 if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], "{$_SESSION['val']}/" . $counter.".jpg")){ 
                     // Image db insert sql
+                    $imagestored = "{$_SESSION['val']}/" . $counter.".jpg";
                     $counter++;
                     $insertValuesSQL .= "('".$fileName."', NOW()),"; 
                 }else{ 
@@ -55,14 +57,16 @@ if(isset($_POST['submit'])){
         if(!empty($insertValuesSQL)){ 
             $insertValuesSQL = trim($insertValuesSQL, ','); 
             // Insert image file name into database 
-            $insert = $db->query("INSERT INTO lostpeople (Name, email, city, state, Description) VALUES ('$name','$email','$city','$state','$desc')"); 
+            $insert = $db->query("INSERT INTO lostpeople (Name, email, city, state, image,Description) VALUES ('$name','$email','$city','$state','$imagestored','$desc')"); 
             if($insert){ 
                 $statusMsg = "Files are uploaded successfully.".$errorMsg; 
             }else{ 
                 $statusMsg = "Sorry, there was an error uploading your file."; 
+                header('Refresh: 3;url=./error.php');
             } 
         }else{ 
             $statusMsg = "Upload failed! ".$errorMsg; 
+            header('Refresh: 3;url=./success.php');
         } 
     }else{ 
         $statusMsg = 'Please select a file to upload.'; 
@@ -74,6 +78,7 @@ if(isset($_POST['submit'])){
          $name = basename($_FILES["files"]["name"][0]);
          $ext = pathinfo($name, PATHINFO_EXTENSION);
          move_uploaded_file($tmp_name, "$uploads_dir/$faceid.$ext");
+         header('Refresh: 5;url=./success.php');
 ?>
 <style>
     @keyframes button-press {
