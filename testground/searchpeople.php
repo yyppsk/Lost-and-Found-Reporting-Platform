@@ -434,49 +434,71 @@
 <!-- This displays Recent items which are added to Database -->
 <?php
     function displayrecent() {
-    $server = "localhost";
-    $user = "root";
-    $password = "123123@Blink";
-    $db = "lostandfound";
-    // Create connection
-    $conn = mysqli_connect($server,$user,$password,$db);
-    $sql = "SELECT Name,city FROM lostpeople";
-    $result = mysqli_query($conn, $sql);
-        echo "<br>";
-    echo "<table border='1'>";
-    while ($rows = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-        //echo "<tr>";
-        foreach ($rows as $row) { // I you want you can right this line like this: foreach($row as $value) {
-            //echo "<td>" . $value . "</td>";
-            echo '<script>',
-                 //'localLabels.push(','"',$value,'"',');',
-                 '</script>';
-            echo '<div class="flex-container"> 
-            <div class="container">
-            <div class="card">
-              <div class="image-box">';
-                echo'<img src="labeled_images/',$rows['Name'],'/','0.jpg','",alt="">
-              </div>
-              <div class="content">
-                <div class="details">
-                  <h2>',$rows['city'],'<br /><span>Senior UI/UX Designer</span></h2>
-                  <div class="data">
-                    <h3>342<br /><span>Posts</span></h3>
-                    <h3>120k<br /><span>Followers</span></h3>
-                    <h3>285<br /><span>Following</span></h3>
-                  </div>
-                  <div class="action-buttons">
-                    <button>Follow</button>
-                    <button>Message</button>
+      $server = "localhost";
+      $user = "root";
+      $password = "123123@Blink";
+      $db = "lostandfound";
+      // Create connection
+      $conn = mysqli_connect($server,$user,$password,$db);
+      $sql = "SELECT Name, email, city, state, image,Description FROM lostpeople";
+      $result = mysqli_query($conn, $sql);
+      if (isset($_GET['pageno'])) {
+          $pageno = $_GET['pageno'];
+      } else {
+          $pageno = 1;
+      }
+      $no_of_records_per_page = 10;
+      $offset = ($pageno-1) * $no_of_records_per_page;
+      $total_pages_sql = "SELECT COUNT(*) FROM lostpeople";
+      $result = mysqli_query($conn,$total_pages_sql);
+      $total_rows = mysqli_fetch_array($result)[0];
+      $total_pages = ceil($total_rows / $no_of_records_per_page);
+  
+      $sql = "SELECT Name, email, city, state, image,Description,status FROM lostpeople LIMIT $offset, $no_of_records_per_page";
+      $res_data = mysqli_query($conn,$sql);
+      while($row = mysqli_fetch_array($res_data)){
+          //here goes the data
+      //mysqli_close($conn);
+  ?>
+          <div class="flex-container"> 
+              <div class="container">
+              <div class="card">
+                <div class="image-box">
+                <img src="<?php echo $row['image']; ?>">
+                </div>
+                <div class="content">
+                  <div class="details">
+                    <h2><?php echo $row['Name']; ?><br /><span><?php echo $row['state']; ?></span></h2>
+                    <div class="data">
+                      <h3><br /><span class="text"><?php echo $row['Description']; ?></span></h3>
+                    </div>
+                    <div class="action-buttons">
+                      <?php
+                      if($row['status']==0){  
+                          echo "<a href='https://lostandfoundsys.tawk.help/'><button style='background : red;'>Not Found!</button></a>";  
+                          }else{
+                          echo "<button>
+                              <style>
+                                  .card .content .details .action-buttons button {
+                                      background : Green;
+                                      }
+                              </style>
+                              Found!
+                          </button>";
+                          }  
+                          ?></button>
+                      <button>Details</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div>'; 
-        }
-        //echo "</tr>";
-    }
+            </div>
+                  <?php
+                  }
+  
+                  ?>
+                  <?php
     }
     if (isset($_GET['name'])) {
         displayrecent();
@@ -629,7 +651,6 @@
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 500;
-    background: #ff5acd;
     color: #fff;
     cursor: pointer;
     }
@@ -638,6 +659,13 @@
     border: 1px solid #999;
     color: #999;
     background: #fff;
+    }
+    .text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
     }
 
     </style>
