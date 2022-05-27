@@ -472,6 +472,8 @@
                     <div class="data">
                       <h3><br /><span class="text"><?php echo $row['Description']; ?></span></h3>
                     </div>
+                    <form action="persondetails.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" id="email" name="email" value="<?php echo $row['email'];?>">
                     <div class="action-buttons">
                       <?php
                       if($row['status']==0){  
@@ -486,8 +488,16 @@
                               Found!
                           </button>";
                           }  
-                          ?></button>
-                      <button>Details</button>
+                          ?>
+                      <input style="padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #999;
+    color: #999;
+    cursor: pointer; " id="action-buttons" type = "submit" name = "submit" value="Details">
                     </div>
                   </div>
                 </div>
