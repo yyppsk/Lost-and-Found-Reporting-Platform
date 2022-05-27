@@ -151,10 +151,14 @@
     background-color:rgba(218, 213, 240, 0.73);
     }
     a.menu:hover {
+        font-size: 22px;
     }
     .fa-cog:hover {
     color: #ac7ed6;
-}
+    }
+    .fa-home:hover {
+    color: #ac7ed6;
+    }
     </style>
     <div class="footer">
     <p class="footer-text-left">
