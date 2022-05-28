@@ -479,7 +479,7 @@
                       if($row['status']==0){  
                           echo "<a href='https://lostandfoundsys.tawk.help/'><button style='background : red;'>Not Found!</button></a>";  
                           }else{
-                          echo "<button>
+                          echo "<button class='action-buttons';>
                               <style>
                                   .card .content .details .action-buttons button {
                                       background : Green;
