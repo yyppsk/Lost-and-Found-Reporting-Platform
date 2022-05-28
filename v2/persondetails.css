@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #f1e0cd
+    url("https://farm4.staticflickr.com/3895/14744582186_8d5b05578c_k.jpg")
+    no-repeat;
+  color: #404041;
+  background-size: cover;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+  font-size: 1.75rem;
+}
+
+#Profile {
+  margin: 6rem auto 0;
+  background: white;
+  max-width: 80%;
+}
+
+#user {
+  padding: 2.5rem;
+}
+
+#img {
+  width: 300px;
+  height: 300px;
+  background: #1e1e1e top center no-repeat;
+  display: block;
+  margin: 4rem auto 0;
+  border-radius: 50%;
+}
+
+#social a {
+  margin: 0 0.5rem;
+}
+
+i[class*="2x"] {
+  color: #da609b;
+}
+
+i[class*="1x"] {
+  transition: color 0.5s ease;
+  color: white;
+}
+i[class*="1x"]:hover {
+  color: #f1e0cd;
+}
+
+#navigation ul {
+  background: #1e1e1e;
+}
+#navigation ul i {
+  color: #f1e0cd;
+}
+#navigation ul li.active i {
+  color: #da609b;
+}
+#navigation ul li.active:hover i {
+  color: white;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.tab-pane {
+  padding: 10% 10% 2%;
+}
+
+.nav-tabs.nav-justified > li > a {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+.nav-tabs.nav-justified > li > a:hover {
+  background: #1e1e1e;
+}
+
+.progress-bar {
+  background-color: #50c878;
+}
+
+label,
+input {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 1.75rem;
+  color: #da609b;
+}
+label small {
+  color: #d88bac;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.form-control:focus {
+  border-color: #d88bac;
+  box-shadow: 0 0 0.5rem #d88bac;
+}
+
+button[type="submit"] {
+  margin-top: 2rem;
+  background: #da609b;
+  border-color: #da609b;
+  color: white;
+  transition: color 0.5s ease;
+}
+button[type="submit"]:hover {
+  background: #da609b;
+  border-color: #da609b;
+  color: #f1e0cd;
+}

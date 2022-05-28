@@ -1,0 +1,23 @@
+https://dev.to/ibn_abubakre/styling-file-inputs-like-a-boss-mhm
+
+Input styling for Image
+
+https://medium.com/@ManBearPigCode/two-coding-techniques-to-quickly-build-a-horizontal-section-webpage-b48dfe44c70e
+
+section Division
+
+https://codepen.io/mortezasharifinia/pen/QWaeOGN
+Cards
+https://codepen.io/davidkpiano/pen/aqNZxX
+cube
+
+echo $variable = "<script>document.write(a)</script>";
+https://stackoverflow.com/questions/14662927/how-can-i-store-javascript-variable-output-into-a-php-variable
+https://bobbyhadz.com/blog/javascript-typeerror-string-split-is-not-a-function#:~:text=The%20%22split%20is%20not%20a,the%20split%20method%20on%20strings.
+https://codepen.io/shavlenkov/pen/PoJpOyd
+
+https://www.php.net/manual/en/features.file-upload.multiple.php
+
+https://codepen.io/juliepark/pen/vjMOKQ
+
+https://codepen.io/ajosedev/pen/rNNQXKZ
