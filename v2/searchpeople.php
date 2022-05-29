@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="/testground/face-api.min.js"> //face Api gets loaded here</script>
-    <title>Document</title>
+    <title>Search People  : Lost and Found</title>
+    <link rel="icon" href="./favicon.svg">
 </head>
 <body>
 <section>
@@ -257,6 +258,209 @@
       <div id="containerresult" class="containerresult"></div>
       <h1 style="text-align: center" id="Found"> </h1>
       <h2 style="text-align: center" id="namePerson"> </h2>
+      <div class="border border-light p-3 mb-4">
+      <button data-modal-target="#modal" class="btn" id="open" style="width:30%;
+    margin-left:35%;
+    margin-right:4%;">Report</button>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Query Matched?</div>
+                <button data-modal-close class="closebtn">&times;
+
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="current desc">
+                   Know this person?
+                   <a href="https://lostandfoundsys.tawk.help/" class="butt">Report Here</a>
+                    </p>
+                        <style>
+                        .butt {
+                          box-shadow:inset 0px 1px 0px 0px #fce2c1;
+                          background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+                          background-color:#ffc477;
+                          border-radius:11px;
+                          border:2px solid #eeb44f;
+                          display:inline-block;
+                          cursor:pointer;
+                          color:#ffffff;
+                          font-family:Arial;
+                          font-size:16px;
+                          font-weight:bold;
+                          padding:8px 18px;
+                          text-decoration:none;
+                          text-shadow:0px 1px 0px #cc9f52;
+                        }
+                        .butt:hover {
+                          background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+                          background-color:#fb9e25;
+                        }
+                        .butt:active {
+                          position:relative;
+                          top:1px;
+                        }
+                        </style>
+                <p class="next desc">
+                    If not, Report us at 
+                    <a href="./dashboard.php" class="butt">Report Lost</a> 
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="nextbtn">
+                    <i class='bx bx-right-arrow-alt tooltip'></i>
+                </button>
+            </div>
+            
+        </div>
+
+        <div id="overlay"></div>
+        <a href="./tableresults.php"><button class="btn" id="open" style="width:30%;
+      margin-left:35%;
+      margin-right:4%;">Show Tabled Dataset</button></a>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn{
+    background: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+}
+
+.modal{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) scale(0);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 15;
+    background: rgba(255,255,255,0.4);
+    width: 500px;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    min-height: 30vh;
+}
+
+.modal.active{
+    transform:translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    padding: 0.5rem 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10px;
+}
+
+.modal-header .title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modal-header .closebtn{
+    cursor: pointer;
+    border: none;
+    font-size: 2rem;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+
+.modal-body{
+    padding: 0.5rem 10px;;
+}
+
+#overlay {
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    pointer-events:all;
+    opacity: 1;
+}
+
+.tooltip{
+    font-size: 2rem;
+    transition: 200ms ease-in-out;
+}
+
+.tool{
+    font-size: 2rem;
+}
+
+.nextbtn{
+    background: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.2rem 0.8rem;
+    cursor: pointer;
+}
+
+.tooltip.active{
+   transform: rotate(180deg)
+}
+
+.title,
+.desc{
+    color: #fff;
+}
+
+.current{
+    display: grid;
+    place-items: center;
+    position: relative;
+    transition: 0.4s;
+}
+
+.next{
+    display: none;
+    transition: 0.2s;
+}
+
+.current.inactive{
+    display: none;
+}
+
+.next.active{
+    display: grid;
+    place-items: center;
+}
+
+        </style>
+</div>
 </section>
     <script>
 
@@ -747,9 +951,72 @@
     <p class="footer-text-left">
     <a href="./home.php" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
     <a href="./searchpeople.php" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
-    <a href="./aboutpranjal" class="menu"><i class="fa fa-info-circle aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
+    <a href="./aboutpranjal.php" class="menu"><i class="fa fa-info-circle aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
     <a href="https://github.com/yyppsk/Lost-and-Found-Reporting-Platform" class="menu"><i class="fa-brands fa-github aria-hidden="true" title="Github Repo" style="font-size:28px"></i></a>  
   </p>
 </div>
+<script>
+const openBtn = document.querySelectorAll('[data-modal-target]')
+const closeBtn = document.querySelectorAll("[data-modal-close]")
+const overlay = document.getElementById("overlay")
+const nextbtn = document.querySelector('.nextbtn')
+const currentParagraph = document.querySelector('.current')
+const nextParagraph = document.querySelector('.next')
+const tooltip = document.querySelector('.tooltip')
+
+nextbtn.addEventListener('click', (() => {
+    currentParagraph.classList.toggle('inactive')
+    nextParagraph.classList.toggle('active')
+    tooltip.classList.toggle('active')
+}))
+
+openBtn.forEach((btn) => {
+    const modal = document.querySelector(btn.dataset.modalTarget) //Checks the target of our data-modal-target. could have also used '.modal'
+    btn.addEventListener('click', (() => {
+    openModal(modal)
+    }))
+})
+
+closeBtn.forEach((btn) => {
+    const modal = btn.closest(".modal")
+    btn.addEventListener('click', (() => {
+    closeModal(modal)
+    }))  
+})
+
+overlay.addEventListener('click', (() => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach((modal) => {
+    closeModal(modal)
+    })  
+}))
+
+
+function openModal(modal){
+    if(modal == undefined) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function closeModal(modal){
+    if(modal == undefined) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61f9619fb9e4e21181bcf7a7/1fqr2an0a';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

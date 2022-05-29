@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Neumorphic Elements</title>
+  <title>Dashboard : Register A lost Person</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,6 +11,7 @@
   <script nomodule='' src='https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'></script>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./dashboard.css">
+  <link rel="icon" href="./favicon.svg">
 </head>
 <body>
 <h1 style="text-align: center;font-size: 45px;">Lost Person Registery Panel</h1>
@@ -172,7 +173,22 @@
     <p class="footer-text-left">
     <a href="index.html" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
     <a href="index.html" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
-    </p>
+    <a href="./aboutpranjal.php" class="menu"><i class="fa fa-info-circle aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
+    <a href="https://github.com/yyppsk/Lost-and-Found-Reporting-Platform" class="menu"><i class="fa-brands fa-github aria-hidden="true" title="Github Repo" style="font-size:28px"></i></a>    
+</p>
 </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61f9619fb9e4e21181bcf7a7/1fqr2an0a';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

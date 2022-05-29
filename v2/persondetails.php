@@ -2,11 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>person details</title>
+  <title>Person details : Lost and Found</title>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600|Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./persondetails.css">
+<link rel="icon" href="./favicon.svg">
 </head>
 <body>
 <style>
@@ -223,11 +224,23 @@ if(isset($_POST['submit'])){
     <p class="footer-text-left">
     <a href="./home.php" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home" style="font-size:28px"></i></a>
     <a href="./searchpeople.php" class="menu"><i class="glyphicon glyphicon-search aria-hidden="true" title="Person Finder" style="font-size:25px"></i></a>
-    <a href="./aboutpranjal" class="menu"><i class="glyphicon glyphicon-info-sign aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
+    <a href="./aboutpranjal.php" class="menu"><i class="glyphicon glyphicon-info-sign aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
     <a href="https://github.com/yyppsk/Lost-and-Found-Reporting-Platform" class="menu"><i class="fa fa-github aria-hidden="true" title="Github Repo" style="font-size:28px"></i></a>
     
   </p>
 </div>
-</body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61f9619fb9e4e21181bcf7a7/1fqr2an0a';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

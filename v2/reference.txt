@@ -21,3 +21,5 @@ https://www.php.net/manual/en/features.file-upload.multiple.php
 https://codepen.io/juliepark/pen/vjMOKQ
 
 https://codepen.io/ajosedev/pen/rNNQXKZ
+https://codepen.io/andymerskin/pen/XNMWvQ
+https://codepen.io/nickylew/pen/PGpEdz

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socials : Pranjal Pratap Singh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="./socials.css" />
+    <link rel="icon" href="./favicon.svg">
+  </head>
+  <body>
+    <style>
+      .gradient {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      z-index: -1;
+        }
+        .gradient svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        }
+        .flex-container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+            padding: auto;
+        }
+        * {
+        margin: 0; padding: 0;
+    }
+      </style>
+    <!-- partial:index.partial.html -->
+    <h1 class="title">My Social Handles</h1>
+
+    <div id="app" class="container">
+      <card
+        data-image="https://www.betterteam.com/images/Linkedin-2400x2400-20200111.png?crop=1:1,smart&width=1200&dpr=2"
+      >
+        <h1 slot="header"><a style="
+          color: #fff;" target="_blank" href="https://www.linkedin.com/in/yyppsk" >LinkedIn</a></h1>
+        <p slot="content">Visit my LinkedIn Profile.</p>
+      </card>
+    </a>
+      <card
+        data-image="https://techcrunch.com/wp-content/uploads/2010/07/github-logo.png"
+      >
+        <h1 slot="header"><a style="
+          color: #fff;" target="_blank" href="https://www.github/com/yyppsk">Github</a></h1>
+        <p slot="content">Checkout the codes I wrote.</p>
+      </card>
+      <card
+        data-image="https://leetcode.com/static/images/LeetCode_Sharing.png"
+      >
+        <h1 slot="header"><a style="
+          color: #fff;" target="_blank" href="https://leetcode.com/pranjalpratapsingh1/">LeetCode</a></h1>
+        <p slot="content">Checkout the leetcode.</p>
+      </card>
+      <card
+        data-image="https://149695847.v2.pressablecdn.com/wp-content/uploads/2021/07/edX-sold-MIT-and-Harvard.jpg"
+      >
+        <h1 slot="header"><a style="
+          color: #fff;" target="_blank" href="https://www.linkedin.com/in/yyppsk/details/certifications/">Skills</a></h1>
+        <p slot="content">My Certifications and Badages.</p>
+      </card>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script src="./socials.js"></script>
+    <!-- Gradient Html -->
+<div class="gradient">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="150%" height="150%" x="-65%" y="-65%" fill="url(#gradient1a)"></rect>
+    <rect width="200%" height="200%" x="10%" y="-80%" fill="url(#gradient1b)"></rect>
+    <rect width="200%" height="150%" x="-50%" y="30%" fill="url(#gradient1c)"></rect>
+    <defs>
+      <radialGradient id="gradient1a">
+        <stop offset="40%" stop-color="#F2C9C9">
+          <animate attributeName="stop-color" values="#F2C9C9;#FFFFFF;#DCD5F5;#FFE7C1;#FFFFFF;#FFE7C1;#F2C9C9" dur="20s" repeatCount="indefinite">
+          </animate>
+        </stop>
+        <stop offset="100%" stop-color="#FFFFFF"></stop>
+      </radialGradient>
+      <radialGradient id="gradient1b">
+        <stop offset="40%" stop-color="#CBEBF0">
+          <animate attributeName="stop-color" values="#CBEBF0;#DCD5F5;#FFFFFF;#CBEBF0;#DCD5F5;#FFFFFF;#CBEBF0" dur="20s" repeatCount="indefinite">
+          </animate>
+        </stop>
+        <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+      </radialGradient>
+      <radialGradient id="gradient1c">
+        <stop offset="0%" stop-color="#FFFFFF">
+          <animate attributeName="stop-color" values="#FFFFFF;#FFE7C1;#F2C9C9;#FFFFFF;#CBEBF0;#F2C9C9;#FFFFFF" dur="20s" repeatCount="indefinite">
+          </animate>
+        </stop>
+        <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+  </svg>
+</div>
+<style>
+  /* Footer */
+
+  .footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 60px;
+  background-color: rgba(218, 213, 240, 0.30);
+  }
+  .footer-text-left {
+  padding: 15px;
+  font-size: 25px;
+  padding-left: 40px;
+  float: left;
+  word-spacing: 20px;
+  }
+  .footer:hover {
+  background-color:rgba(218, 213, 240, 0.73);
+  }
+  a.menu:hover {
+      font-size: 22px;
+  }
+  .fa-cog:hover {
+  color: #ac7ed6;
+  }
+  .fa-home:hover {
+  color: #ac7ed6;
+  }
+  </style>
+  <div class="footer">
+  <p class="footer-text-left">
+  <a href="./home.php" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
+  <a href="./searchpeople.php" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
+  <a href="./aboutpranjal.php" class="menu"><i class="fa fa-info-circle aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
+  <a href="https://github.com/yyppsk/Lost-and-Found-Reporting-Platform" class="menu"><i class="fa-brands fa-github aria-hidden="true" title="Github Repo" style="font-size:28px"></i></a>  
+</p>
+</div>
+  </body>
+</html>
