@@ -13,3 +13,11 @@
 - Added Easy Navigation and Material Design
 - You can receive an email if someone reports a person via the profile page.
 - Built Over PHP, JS, and HTML with ML APIs
+
+Checkout OLD platform : 
+
+lostandfound.gq/
+
+Checkout Newsite Presentation :
+
+https://www.canva.com/design/DAFBsCLrjUA/7JOPyQxkpl71n_u_1DPyHw/view?website#2
