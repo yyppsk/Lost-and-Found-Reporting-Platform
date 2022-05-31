@@ -1,0 +1,34 @@
+"filename", "language", "PHP", "JavaScript", "HTML", "CSS", "Markdown", "XML", "comment", "blank", "total"
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\README.md", "Markdown", 0, 0, 0, 0, 13, 0, 0, 5, 18
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\images\favicon.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\index.php", "PHP", 138, 0, 0, 0, 0, 0, 0, 6, 144
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\links.php", "PHP", 7, 0, 0, 0, 0, 0, 0, 0, 7
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\search.php", "PHP", 160, 0, 0, 0, 0, 0, 2, 16, 178
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\style.php", "PHP", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V1\tempCodeRunnerFile.php", "PHP", 2, 0, 0, 0, 0, 0, 0, 0, 2
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\aboutpranjal.php", "PHP", 228, 0, 0, 0, 0, 0, 0, 3, 231
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\assets\css\style.css", "CSS", 0, 0, 0, 1243, 0, 0, 0, 1, 1244
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\config\dbConfig.php", "PHP", 13, 0, 0, 0, 0, 0, 3, 1, 17
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\dashboard.css", "CSS", 0, 0, 0, 487, 0, 0, 8, 15, 510
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\dashboard.js", "JavaScript", 0, 35, 0, 0, 0, 0, 4, 9, 48
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\dashboard.php", "PHP", 180, 0, 0, 0, 0, 0, 6, 9, 195
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\dbConfig.php", "PHP", 10, 0, 0, 0, 0, 0, 3, 2, 15
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\db_connect.php", "PHP", 8, 0, 0, 0, 0, 0, 0, 0, 8
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\display.php", "PHP", 12, 0, 0, 0, 0, 0, 2, 2, 16
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\error.php", "PHP", 326, 0, 0, 0, 0, 0, 1, 28, 355
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\face-api.min.js", "JavaScript", 0, 1, 0, 0, 0, 0, 1, 0, 2
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\favicon.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\home.php", "PHP", 314, 0, 0, 0, 0, 0, 2, 1, 317
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\logo.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\persondetails.css", "CSS", 0, 0, 0, 110, 0, 0, 0, 19, 129
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\persondetails.php", "PHP", 228, 0, 0, 0, 0, 0, 16, 2, 246
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\script.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, 4, 28
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\searchpeople.php", "PHP", 889, 0, 0, 0, 0, 0, 27, 106, 1022
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\socials.css", "CSS", 0, 0, 0, 133, 0, 0, 0, 9, 142
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\socials.html", "HTML", 0, 0, 150, 0, 0, 0, 3, 3, 156
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\socials.js", "JavaScript", 0, 67, 0, 0, 0, 0, 0, 9, 76
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\style.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\success.php", "PHP", 327, 0, 0, 0, 0, 0, 1, 27, 355
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\tableresults.php", "PHP", 128, 0, 0, 0, 0, 0, 3, 4, 135
+"d:\GIT\Local Repo\Lost-and-Found-Reporting-Platform\V2\upload.php", "PHP", 208, 0, 0, 0, 0, 0, 9, 10, 227
+"Total", "-", 3178, 127, 150, 1973, 13, 3, 91, 293, 5828
