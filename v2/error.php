@@ -341,8 +341,8 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 <div class="footer">
     <p class="footer-text-left">
-    <a href="index.html" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
-    <a href="index.html" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
+    <a href="./home.php" class="menu"><i class="fa fa-home" aria-hidden="true" title="Home"></i></a>
+    <a href="./searchpeople.php" class="menu"><i class="fa-solid fa-cog fa-spin aria-hidden="true" title="Person Finder"></i></a>
     <a href="./aboutpranjal.php" class="menu"><i class="fa fa-info-circle aria-hidden="true" title="About Pranjal" style="font-size:25x"></i></a>
     <a href="https://github.com/yyppsk/Lost-and-Found-Reporting-Platform" class="menu"><i class="fa-brands fa-github aria-hidden="true" title="Github Repo" style="font-size:28px"></i></a>   
   </p>
