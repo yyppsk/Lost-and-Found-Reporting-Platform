@@ -2,7 +2,7 @@
 // Database configuration
 $dbHost     = "localhost";
 $dbUsername = "root";
-$dbPassword = "123123@Blink";
+$dbPassword = "MyPassword";
 $dbName     = "lostandfound";
 
 // Create database connection
