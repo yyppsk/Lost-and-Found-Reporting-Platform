@@ -95,7 +95,7 @@ if(isset($_POST['submit'])){
     $email = $_POST['submit'];
     $server = "localhost";
     $user = "root";
-    $password = "123123@Blink";
+    $password = "MyPassword";
     $db = "lostandfound";
     // Create connection
     $conn = mysqli_connect($server,$user,$password,$db);
