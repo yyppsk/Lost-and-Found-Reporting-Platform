@@ -80,7 +80,7 @@
     //This code Snippet Creates local array for Models
     $server = "localhost";
     $user = "root";
-    $password = "123123@Blink";
+    $password = "MyPassword";
     $db = "lostandfound";
     // Create connection
     $conn = mysqli_connect($server,$user,$password,$db);
@@ -640,7 +640,7 @@
     function displayrecent() {
       $server = "localhost";
       $user = "root";
-      $password = "123123@Blink";
+      $password = "MyPassword";
       $db = "lostandfound";
       // Create connection
       $conn = mysqli_connect($server,$user,$password,$db);
