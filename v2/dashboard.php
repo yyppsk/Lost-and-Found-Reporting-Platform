@@ -24,7 +24,7 @@
     function createDirectory() { //function definition to Create a dynamic Directory for every user
         $server = "localhost";
         $user = "root";
-        $password = "123123@Blink";
+        $password = "MyPassword";
         $db = "lostandfound";
         $add = $_POST["add"];
         mkdir("labeled_images/".$add);
